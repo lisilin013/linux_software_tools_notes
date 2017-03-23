@@ -8,7 +8,7 @@ Ctrl+F：查找内容<br/>
 Ctrl+Shift+F：查找并替换<br/>
 Ctrl+H：替换<br/>
 Ctrl+G : arrive the num line<br/>
-## ecit code -----------------------------------------------------------
+## edit code -----------------------------------------------------------
 Ctrl+X：删除当前行<br/>
 按Ctrl+Shift+上下键，可替换行<br/>
 <br/>
