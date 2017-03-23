@@ -1,4 +1,4 @@
-# hotkey
+# sublime text hotkey
 
 ## new window -----------------------------------------------------
 Ctrl+N：新建窗口<br/>
