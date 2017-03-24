@@ -23,7 +23,7 @@ deb-src http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted univers
 deb-src http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse<br/>
 deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse<br/>
 <br/>
-sudo gedit /etc/apt/sources.list<br/>
+sudo apt-get update<br/>
 
 ## W: 无法下载 http://extras.ubuntu.com/ubuntu/dists/trusty/main/binary-i386/Packages  Hash 校验和不符
 solve:<br/>
