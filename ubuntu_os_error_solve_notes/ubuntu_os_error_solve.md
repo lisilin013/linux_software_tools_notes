@@ -18,3 +18,11 @@ sudo apt-get update<br/>
 solve:<br/>
 replace the source with aliyun mentioned before.<br/>
 
+## ubuntu中怎样添加或删除一个PPA源
+添加PPA源的命令为：<br/>
+sudo add-apt-repository ppa:user/ppa-name<br/>
+删除命令格式则为：<br/>
+sudo add-apt-repository -r ppa:user/ppa-name<br/>
+
+
+

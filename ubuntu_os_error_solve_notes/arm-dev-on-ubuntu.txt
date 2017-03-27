@@ -1,0 +1,45 @@
+
+##Linux开发环境
+把用户添加到用户组　"dialout":
+sudo usermod -a -G dialout $USER
+
+sudo add-apt-repository ppa:george-edison55/cmake-3.x -y
+sudo apt-get update
+sudo apt-get install python-argparse git-core wget zip \
+    python-empy qtcreator cmake build-essential genromfs -y
+# simulation tools
+sudo apt-get install ant protobuf-compiler libeigen3-dev libopencv-dev openjdk-8-jdk openjdk-8-jre clang-3.5 lldb-3.5 -y
+
+
+Ubuntu配备了一系列代理管理，这会严重干扰任何机器人相关的串口（或usb串口），卸载掉它也不会有什么影响:
+sudo apt-get remove modemmanager
+
+更新包列表和安装下面的依赖包。务必安装指定的版本的包
+sudo apt-get install python-serial openocd \
+    flex bison libncurses5-dev autoconf texinfo build-essential \
+    libftdi-dev libtool zlib1g-dev \
+    python-empy  -y
+
+
+## install gcc-arm-none-eabi
+在添加arm-none-eabi工具链之前，请确保删除残余。
+sudo apt-get remove gcc-arm-none-eabi gdb-arm-none-eabi binutils-arm-none-eabi gcc-arm-embedded
+sudo add-apt-repository --remove ppa:team-gcc-arm-embedded/ppa
+
+
+GCC 5.4:
+pushd .
+cd ~
+wget https://launchpad.net/gcc-arm-embedded/5.0/5-2016-q2-update/+download/gcc-arm-none-eabi-5_4-2016q2-20160622-linux.tar.bz2
+tar -jxf gcc-arm-none-eabi-5_4-2016q2-20160622-linux.tar.bz2
+exportline="export PATH=$HOME/gcc-arm-none-eabi-5_4-2016q2/bin:\$PATH"
+if grep -Fxq "$exportline" ~/.profile; then echo nothing to do ; else echo $exportline >> ~/.profile; fi
+. ~/.profile
+popd
+
+sudo dpkg --add-architecture i386
+sudo apt-get update
+
+安装32位支持库（如果已经是运行在32位，那么可能会失败，并且此步骤可以跳过）：
+sudo apt-get install libc6:i386 libgcc1:i386 libstdc++5:i386 libstdc++6:i386
+sudo apt-get install gcc-4.6-base:i386
