@@ -1,10 +1,10 @@
 ## 准备工作  
-sudo apt-get install git 
-ssh-keygen -t rsa -C "your_email@youremail.com"    
-cat  ~/.ssh/id_rsa.pub  
-ssh -T git@github.com  
-config --global user.name "your name"   //配置用户名  
-git config --global user.email "your email"    //配置email   
+sudo apt-get install git <br/>
+ssh-keygen -t rsa -C "your_email@youremail.com"    <br/>
+cat  ~/.ssh/id_rsa.pub  <br/>
+ssh -T git@github.com  <br/>
+config --global user.name "your name"   //配置用户名  <br/>
+git config --global user.email "your email"    //配置email   <br/>
 
 ## 利用Git从本地上传到GitHub
 git init  
