@@ -25,7 +25,7 @@ git checkout new_feature //先创建一个分支然后手动切换
   
 git branch  //看你现在项目下所有的分支 
 
-git add .git commit -m "adds my new feature" //加载（stage）并且提交你的文件 
+
 git checkout master                          //移到你的主干分支  
 git merge new_feature                        //合并  
   
@@ -34,6 +34,7 @@ git checkout master                              //移到主分支
   
 git branch -d new_feature  //  
 git branch -D new_feature  //强制删除分支  
+
 
 ## 从GitHub克隆项目到本地  
 git clone https://github.com/PentonBin/Demo.git（例子）  

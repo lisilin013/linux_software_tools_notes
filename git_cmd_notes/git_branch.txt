@@ -1,0 +1,32 @@
+第一步，git clone远程
+
+第二步，拉取远程分支eg: dev
+在master下直接git fetch origin dev:dev
+然后就可以git checkout dev到其分之下工作了
+
+或者
+
+在master下git checkout -b dev建立dev分支同时切换到dev下
+git fetch origin dev
+
+或者
+在master下git checkout -b dev建立dev分支同时切换到dev下
+git fetch origin dev:tmp 把remote端dev分支内容copy到本地tmp分支上，如果本地没有tmp则会自动创建
+在dev分支下git merge tmp 会把tmp中的remote端dev内容融合到当前分支下
+
+
+第三步，在所在分支下
+git push origin branch_name
+注意，这个branch_name是remote端你想push到的分支名字，也是你现在所在分支的名字
+
+如果remote端没有这个branch，则会自动创建并把你推送的内容放进去
+
+
+
+
+
+在本地master下工作，搞完之后切换到git checkout dev
+git merge master 
+
+然后提交dev即可
+
