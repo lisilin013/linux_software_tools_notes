@@ -1,0 +1,19 @@
+tr col join paste
+
+# tr del some words of tex
+tr -d 'characters' text #del characters in the text
+tr -s 'a' text  #del repeat char 'a'
+
+
+#col: tab<-->spaces
+col -x file #tab to spaces
+col -h file #spaces to tab (default option)
+
+# join
+join file1 file2 
+join -t 'delimiter'
+
+#paste
+-d tab is the delimiter
+-s every file is a dependent line
+     
