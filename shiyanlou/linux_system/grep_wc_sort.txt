@@ -1,0 +1,22 @@
+## ; &&
+sudo apt-get update;sudo apt-get install xx
+
+sudo apt-get update && sudo apt-get install xx
+
+## | 
+ls -al /etc | less
+
+## grep
+grep -rnI 'sudo' .
+
+## wc
+wc -l filename #count lines
+wc -w filename #count words
+wc -c fielname #count characters
+
+# sort
+sort -t':' -k 3 -n 
+        #-t delimiter
+        #-k numeric field
+        #-n sort by num and
+        # default sort by dictionary
