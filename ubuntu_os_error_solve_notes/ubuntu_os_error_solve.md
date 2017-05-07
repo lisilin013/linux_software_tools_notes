@@ -4,6 +4,11 @@ solve:<br/>
 
 		sudo ethtool -s eth0 autoneg off speed 100 duplex full
 		sudo ethtool -s eth0 speed 10 duplex half
+		
+		# this works well
+		sudo vim /etc/NetworkManager/NetworkManager.conf
+		# change the line managed=false to managed=true
+
 
 notes:
 Now, I have just tried the first cmd, and it is already beginning to work.
