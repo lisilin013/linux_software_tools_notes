@@ -1,17 +1,12 @@
 # UBUNTU_OS_ERROR
 ## cannot link the wire internet
 solve:<br/>
-
-		sudo ethtool -s eth0 autoneg off speed 100 duplex full
-		sudo ethtool -s eth0 speed 10 duplex half
-		
-		# this works well
-		sudo vim /etc/NetworkManager/NetworkManager.conf
-		# change the line managed=false to managed=true
-
-
-notes:
-Now, I have just tried the first cmd, and it is already beginning to work.
+```
+安装wicd网络管理器解决网卡驱动问题代码: sudo modprobe -r rtl8723be 
+ sudo modprobe rtl8723be -v ips=0 fwlps=0 swenc=1   
+新建文件 （注意使用touch） sudo touch /etc/modprobe.d/rtl8723be.conf
+ 用vim打开后添加以下文段 options rtl8723be ips=0 fwlps=0 swenc=1
+```
 
 ## ubuntu source update
 
