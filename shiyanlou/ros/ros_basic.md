@@ -157,7 +157,25 @@ rossrv = ros+srv : provides information related to ROS service definitions
 rosmake = ros+make : makes (compiles) a ROS package
 ```
 
+```
+# 录制与回放数据
+# 录制所有话题
+rosbag record -a
+# 录制制定话题，并保存到subset.bag文件中
+rosbag record -O subset /turtle1/cmd_vel /turtle1/pose
 
+# 查看
+rosbag info <your bagfile>
+# 回放
+rosbag play <your bagfile>
+
+```
+
+```
+# roswtf 可以检查你的ROS系统并尝试发现问题
+roswtf
+
+```
 
 
 
