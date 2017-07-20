@@ -26,4 +26,12 @@ l #list content
 
 ################UNKNOWN#############
 backtrace #func stack 
+
+
+set (CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS}  -g ")
+set (CMAKE_VERBOSE_MAKEFILE ON)
+
+＄gdb ./example2_sam
+
+
 ```
