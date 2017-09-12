@@ -8,8 +8,8 @@ aux_source_directory(. SRC_LST)
 
 link_directories(/tmp/hello-world-project/usr/lib)
 
-ADD_EXECUTABLE(main ${SRC_LST})
+add_executable(main ${SRC_LST})
 
 # 为 target 添加共享库
-target_link_libraries(main hello)
+target_link_libraries(main libhello.so)
 
