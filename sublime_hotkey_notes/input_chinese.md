@@ -13,3 +13,10 @@ sudo cp ./src/subl /usr/bin/
 
 ### 3 reboot sublime
 
+
+# sublime中文乱码
+```
+# 安装这两个package
+Codecs33
+ConvertToUTF8
+```

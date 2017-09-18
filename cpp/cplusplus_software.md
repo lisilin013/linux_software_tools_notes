@@ -16,6 +16,20 @@ make
 > 一切成功的话将会在SublimeClang/internals目录中生成libcache.so库文件。重启Sublime Text，然后按快捷键Ctrl + `(Esc下面那个键)打开自带的控制输出，看看有没有错误，如果没有错误就说明一切OK了
 
 
+## sublime clang 设置支持C++
+打开preference-->package settings-->sublimeclang-->settings default
+搜索additional_language_options，修改成以下代码
+```
+    "additional_language_options":
+    {
+        // For example, you can use "c++": ["-std=c++11"] to enable C++11 features.
+        "c++" : ["-std=c++11"],
+        "c": [],
+        "objc": [],
+        "objc++": []
+    },
+```
+
 ## 编译cpp
 [Sublime Text 3 化身为高大上的C/C++ IDE](https://xuanwo.org/2014/06/05/sublime-text-3-IDE/)
 
@@ -38,4 +52,11 @@ make
         }
     ]
 }
+```
+
+
+## 格式化代码
+在packagecontrol中安装SublimeAStyleFormatter
+```
+ctr+alt+f 格式化本文件
 ```
