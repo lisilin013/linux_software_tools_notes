@@ -13,7 +13,7 @@ list( APPEND CMAKE_CXX_FLAGS "-std=c++0x ${CMAKE_CXX_FLAGS} -g -ftest-coverage -
 
 ```
 
-## 2. 编译pthread库
+## 2. 使用pthread库
 ```
 # enable both C++ and C
 project(cpp_example VERSION 0.1.0 LANGUAGES CXX C)
@@ -24,4 +24,8 @@ add_executable(demo ${CPP_SRC})
 target_link_libraries(demo ${CMAKE_THREAD_LIBS_INIT})
 ```
 
+## 3 使用boost库
+```
+target_link_libraries(exe_name ${Boost_PROGRAM_OPTIONS_LIBRARY})
+```
 
