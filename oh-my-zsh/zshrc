@@ -121,6 +121,7 @@ alias openwin='gnome-open'
 # cmake cmd configure
 #####################################################################
 alias cmakemake='cmake .. && make'
+alias cmakefull='mkdir build && cd build && cmake .. && make'
 
 #####################################################################
 # git cmd configure
@@ -146,18 +147,5 @@ source /usr/share/autojump/autojump.zsh
 source /opt/ros/indigo/setup.zsh
 alias echorospath='echo $ROS_PACKAGE_PATH'
 alias sourcerosws='source devel/setup.zsh'
-
-# ros turtlebot
-export TURTLEBOT_3D_SENSOR=kinect
-
-# ros other_ros_lib add ros path
-export ROS_PACKAGE_PATH=/opt/ros/indigo/share:/opt/ros/indigo/stacks
-
-#####################################################################
-# gcc-arm-none-eabi configure
-#####################################################################
-export PATH=$PATH:~/gcc-arm-none-eabi-5_4-2016q2/bin
-
-
 
 
